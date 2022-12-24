@@ -1,4 +1,26 @@
-@Library('roboshop') _
+pipeline {
+  agent any
 
-env.REPO_URL = "https://github.com/raghudevopsb69/user"
-nodejs()
+  stages {
+
+   stage('Code Quality') {
+      steps {
+         echo 'Code Quality'
+       }
+     }
+
+    stage('Test Cases') {
+       steps {
+          echo 'Test Cases'
+        }
+     }
+
+     stage('Publish A Release') {
+        steps {
+          echo 'Publish A Release'
+        }
+      }
+
+   }
+
+}
